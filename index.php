@@ -140,9 +140,10 @@ if(isset($_POST['submit']))
 	}
 	else{
 	session_start();
-	$con=mysqli_connect("localhost","root","");
-	if(!$con){die('could not connectr'.mysqli_error($con));}
-	mysqli_select_db($con,"envo");
+	$con = mysqli_connect("db4free.net", "enovquest", "envo1234");  
+			 if(!$con)
+			 {die('could not connectr'.mysqli_error($con));}
+			 mysqli_select_db($con,"envoquest");
 
 
 
