@@ -125,10 +125,10 @@ a{	color:black;
  
 		 <?php  
 		 
-		 $con = mysqli_connect("db4free.net", "aashishraj", "hello123");  
+		$con = mysqli_connect("db4free.net", "enovquest", "envo1234");  
 			 if(!$con)
 			 {die('could not connectr'.mysqli_error($con));}
-			 mysqli_select_db($con,"envo");
+			 mysqli_select_db($con,"envoquest");
 		 $email=$_SESSION['email'];
 		 $query = "SELECT * FROM photos ORDER BY udate DESC";  
 		 $result = mysqli_query($con, $query);  
