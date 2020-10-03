@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html>
-<body>
+﻿{% extends "import.html" %}
+{% block content %}
 
-<h1>The a target attribute</h1>
+<center>
+    <h2>Detection</h2><br>
+    <div>
+        <button type="button" class="btn btn-info btn-lg " id="btn-predict">Detect!</button>
+    </div>
+    <div class="loader" style="display:none;"></div>
 
-<a href=<script>window.open(\"index.php\",\"_self\")</script> target="_blank">CLick to login</a> 
+    <h3 id="result">
+        <span> </span>
+    </h3>
 
-<p>If you set the target attribute to "_blank", the link will open in a new browser window or a new tab.</p>
-
-</body>
-</html>
+    </div>
+</center><br><br>
+{% endblock %}
