@@ -149,9 +149,18 @@ if(isset($_POST['submit']))
 	$con = mysqli_connect("db4free.net", "enovquest", "envo1234");  
 			 if(!$con)
 			 {die('could not connectr'.mysqli_error($con));}
-			 mysqli_select_db($con,"envoquest");
+			 else
+			 {
+			 echo '<script type="text/javascript">';
+			 echo 'alert("connceted to db")';
+			 echo '</script>';
+			 }
+			  mysqli_select_db($con,"envoquest");
 	$sql="INSERT INTO users(uname,email,password,no_post,no_followers,no_following) values('$name','$email','$pass',0,0,0)";
 	if(!mysqli_query($con,$sql)){
+	echo '<script type="text/javascript">';
+			 echo 'alert("kuch ni harah")';
+			 echo '</script>';
 	die('error'.mysqli_error($con));
 	}
 	echo '<script type="text/javascript">';
